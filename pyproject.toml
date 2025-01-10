@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "global-entry-notifier"
+version = "0.0.1"
+authors = [
+  { name="Pradosh Kharel", email="pradosh.kharel@gmail.com" },
+]
+description = "Query for Global Entry interview availability and notify via Discord"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "pyyaml",
+  "discord-webhook"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+global-entry-notifier = "global_entry_notifier:global_entry_notifier"
+
+[project.urls]
+Homepage = "https://github.com/pkharel/global-entry-notifier"
+Issues = "https://github.com/pkharel/global-entry-notifier"
