@@ -24,7 +24,6 @@ class GlobalEntryNotifier:
         r = requests.get(
             f"https://ttp.cbp.dhs.gov/schedulerapi/slots?orderBy=soonest&limit=1&locationId={location}&minimum=1"
         )
-        # r = requests.get(f"https://ttp.cbp.dhs.gov/schedulerapi/slots?orderBy=soonest&limit=1&locationId=sadlfkjaslas&minimum=1")
         r.raise_for_status()
         slots = r.json()
         return slots
